@@ -1,0 +1,954 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+@font-face {
+    font-family: bassBlood;
+    src: url(../assets/fonts/strato.regular.ttf);
+}
+
+@mixin font-home-style($color, $size) {
+    color: $color;
+    font-size: $size;
+
+}
+
+@mixin photo-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+
+/* ------------------------------------------------------------- */
+
+body {
+    background-color: $color-red;
+}
+
+/* 404 */
+
+.contenedor404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button404 {
+    border: $color-dark-red 4px solid;
+    border-radius: 10rem;
+    @include font-home-style($color-white-text, 2rem);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    transition: all .5s;
+}
+
+.button404:hover {
+    @include font-home-style($color-white-text, 2.25rem);
+    padding: .75rem 2rem;
+}
+
+.button404:active {
+    background-color: $color-dark-red;
+}
+
+/* ------------------------------------------------------------- */
+
+/* NAVBAR */
+
+.navbar {
+    background-color: $color-red;
+
+    .navbar__logo {
+        font-family: bassBlood;
+        text-decoration: none;
+        transform: rotate(350deg);
+        color: $color-white-text;
+        font-weight: bold;
+        transition: all 0.5s;
+    }
+
+    .navbar__logo:hover {
+        transform: rotate(360deg);
+        color: $color-dark-red;
+    }
+}
+
+.linkHover {
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: $color-white-text;
+    transition: color .4s;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.linkHover:hover {
+    color: $color-dark-red;
+}
+
+.resetUl {
+    list-style: none;
+    padding-left: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        display: inline-block;
+        padding-right: 2vh;
+
+    }
+}
+
+/* FOOTER */
+
+.footerBass {
+    background-color: $color-dark-red;
+}
+
+.footer__logo {
+    font-family: bassBlood;
+    transform: rotate(345deg);
+    font-size: 2rem;
+    color: $color-white-text;
+
+}
+
+.footer__informacion {
+    h4 {
+        color: $color-white-text;
+        text-align: center;
+        border-bottom: .15rem $color-white-text solid;
+        font-size: 1.75rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0 0;
+
+        li {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: $color-white-text;
+                font-size: 1.25rem;
+                transition: all .3s;
+            }
+
+            a:hover {
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: $color-light-red;
+            }
+        }
+    }
+}
+
+
+
+/* ------------------------------------------------------------- */
+
+/* HOME */
+
+
+
+@for $i from 1 through 3 {
+    @if $i % 2==0 {
+        .fondoBassHome-#{$i} {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $color-light-red;
+
+        }
+    }
+
+    @else {
+        .fondoBassHome-#{$i} {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $color-red;
+
+        }
+    }
+}
+
+
+.fondoBassHomeButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-light-red;
+
+}
+
+.beneficiosFondo {
+    background-color: $color-red;
+}
+
+.opinionesFondo {
+    background-color: $color-light-red;
+}
+
+/* Textos */
+
+
+.titleBass {
+    text-align: left;
+    @include font-home-style($color-white-text, 3rem);
+}
+
+.titleBassRight {
+    text-align: right;
+    @include font-home-style($color-white-text, 3rem);
+}
+
+.textBassHomeRight {
+    text-align: right;
+    @include font-home-style($color-white-text, 1.5rem);
+}
+
+.apartadoBassHome {
+    width: 40rem;
+    height: max-content;
+
+    p {
+        color: $color-white-text;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+.textBassHome {
+    @include font-home-style($color-white-text, 1.5rem);
+}
+
+.buttonBassHome {
+    display: inline;
+    height: 3.5rem;
+    margin: .5rem auto;
+    background-color: $color-red;
+    border-radius: 10rem;
+    text-align: center;
+    @include font-home-style($color-white-text, 2rem);
+    transition: all .2s;
+
+}
+
+.buttonBassHome2 {
+    display: inline;
+    height: 3.5rem;
+    margin: .5rem auto;
+    border: $color-red 4px solid;
+    border-radius: 10rem;
+    text-align: center;
+    @include font-home-style($color-white-text, 2rem);
+    transition: all .2s;
+
+}
+
+.buttonBassHome:hover {
+    @include photo-size(55%, 4rem);
+    @include font-home-style($color-white-text, 2.5rem);
+
+}
+
+.buttonBassHome:active {
+    background-color: $color-dark-red;
+}
+
+.buttonBassHome2:hover {
+    @include photo-size(55%, 4rem);
+    @include font-home-style($color-white-text, 2.5rem);
+}
+
+.buttonBassHome2:active {
+    background-color: $color-dark-red;
+}
+
+
+
+/* Fotos */
+
+.fotoBassHome {
+    display: inline-block;
+    @include photo-size(34rem, 34rem);
+}
+
+.circleFoto1 {
+
+    @include photo-size(100%, 100%);
+    border-radius: 100%;
+    background-image: url(../../assets/images/flea3.jpg);
+    background-position: center;
+    background-size: 200%;
+    border: $color-red .7rem solid;
+
+}
+
+.circleFoto2 {
+    @include photo-size(100%, 100%);
+    border-radius: 100%;
+    background-image: url(../../assets/images/flea2.jpg);
+    background-position: center;
+    border: $color-light-red .7rem solid;
+
+}
+
+.circleFoto3 {
+
+    @include photo-size(100%, 100%);
+    border-radius: 100%;
+    background-image: url(../../assets/images/flea1.jpg);
+    background-position: center;
+    border: $color-light-red .7rem solid;
+}
+
+/* BENEFICIOS */
+
+.card {
+    background-color: transparent !important;
+    border: transparent !important;
+}
+
+.beneficios__title {
+    @include font-home-style($color-white-text, 5vh);
+}
+
+.cardBeneficios__text {
+    @include font-home-style($color-white-text, 3vh);
+
+}
+
+/* Opiniones clientes */
+
+.personaFeliz {
+    width: 10vw;
+    height: 20vh;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+    z-index: -100;
+    border: $color-white-text .5vh solid;
+}
+
+.cardOpiniones__text {
+    @include font-home-style($color-white-text, 2vh);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* NUESTROS BAJOS */
+
+
+
+.article__bass {
+    width: 30rem;
+    display: inline-block;
+    background-color: $color-light-red;
+    padding: .5rem .5rem;
+    border-radius: 1rem;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    a {
+        text-decoration: none;
+        display: flex;
+        align-content: center;
+    }
+
+}
+
+.articlebass__button {
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    background-color: $color-light-red;
+    border: $color-dark-red .3rem solid;
+    color: $color-white-text;
+    border-radius: 10rem;
+    width: 100%;
+    transition: all .3s;
+}
+
+.articlebass__button:hover {
+    font-size: 1.75rem;
+    width: 80%;
+    padding: .75rem .1rem;
+}
+
+.articlebass__button:active {
+    background-color: $color-dark-red;
+}
+
+.colorBackgroundNuestrosBajos {
+    background-color: $color-light-red;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.89)), url(../assets/images/bajosTienda.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .titleBajosVenta {
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+    }
+}
+
+.shop__boxBajos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 7rem;
+
+    article {
+        margin: 2rem 0;
+    }
+}
+
+.shop__aside {
+    background-color: $color-light-red;
+    position: sticky;
+    padding: .5rem 1rem;
+    height: max-content;
+    top: 10rem;
+    margin: 2rem 1rem 9rem 0;
+    border-radius: 1rem;
+
+    .colorSelection {
+        padding: 0 0;
+    }
+
+    .brandSelect {
+        padding: 0 .3rem;
+
+        label {
+            color: $color-white-text;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        border-bottom: $color-dark-red 2px solid;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        color: $color-white-text;
+        font-size: 1.5rem;
+    }
+
+    input {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.gridShopBass {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100% 100%;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* UBICACIONES/QUIENES SOMOS */
+
+
+
+.imgBackgroundNostros {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.89)), url(../assets/images/background-nosotros.jpg), ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: auto 0;
+    height: 25rem;
+
+    h1 {
+        @include font-home-style($color-white-text, 4rem);
+        font-weight: bold;
+    }
+
+}
+
+.ubicacionTiendas {
+    background-color: $color-light-red;
+    border-radius: 1rem;
+
+    iframe {
+        height: 30rem;
+        border-radius: 1rem;
+        padding: 0 0 0 0;
+    }
+
+    div h3,
+    p {
+        color: $color-white-text;
+
+    }
+
+    div h3 {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    div p {
+        font-size: 1.25rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.historiaText {
+    background-color: $color-light-red;
+    border-radius: 1rem;
+
+    h2,
+    p {
+        color: $color-white-text;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------------*/
+
+/* CONTACTOS */
+
+.backgroundSoporte {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.89)), url(../assets/images/soporte-tecnico-min.jpg), ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 25rem;
+
+    h1 {
+        @include font-home-style($color-white-text, 4rem);
+        font-weight: bold;
+    }
+}
+
+.section__contacto {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: $color-light-red;
+    width: 30rem;
+    border-radius: 1rem;
+
+    form {
+        .form__buttons {
+            .buttons__button {
+                color: $color-white-text;
+                font-size: 1.75rem;
+                background-color: transparent;
+                border-radius: 1rem;
+                border: $color-white-text .2rem solid;
+                transition: all .3s;
+            }
+
+            .buttons__button:hover {
+                font-size: 2rem;
+            }
+
+            .buttons__button:active {
+                border: $color-dark-red .2rem solid;
+                color: $color-dark-red;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------ */
+
+/* ARTISTAS */
+
+.backgroundArtistas {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.89)), url(../assets/images/artistasBackground.jpg), ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 25rem;
+
+    h1 {
+        @include font-home-style($color-white-text, 4rem);
+        font-weight: bold;
+    }
+}
+
+.bajistasDestacados {
+    background-color: $color-light-red;
+    border-radius: 1rem;
+
+    h2 {
+        color: $color-white-text;
+        font-weight: bold;
+    }
+}
+
+
+.artistas__box {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        z-index: 100;
+        filter: brightness(100%);
+        transition: all .5s;
+
+    }
+
+    .artistas__hover {
+        text-align: center;
+        position: absolute;
+        z-index: -100;
+        transition: all .5s;
+
+        h3 {
+            color: $color-white-text;
+            font-family: bassBlood;
+            transform: rotate(350deg);
+        }
+    }
+
+}
+
+.artistas__box:hover {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        z-index: 100;
+        filter: brightness(50%);
+    }
+
+    .artistas__hover {
+        text-align: center;
+        position: absolute;
+        z-index: 200;
+
+        h3 {
+            color: $color-white-text;
+        }
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+
+@media only screen and (max-width:690px) {
+
+    /* HOME */
+
+    .titleBass,
+    .titleBassRight,
+    .textBassHomeRight,
+    .textBassHome {
+        text-align: center;
+    }
+
+    .titleBass,
+    .titleBassRight {
+        font-size: 2.6rem;
+    }
+
+    .textBassHome,
+    .textBassHomeRight {
+        font-size: 1.5rem;
+
+    }
+
+    .fondoBassHome {
+        display: inline-block;
+        height: 28rem;
+        @include photo-size(100vw, max-content);
+    }
+
+    .fondoBassHomeButtons {
+        display: inline-block;
+        height: max-content !important;
+        @include photo-size(100vw, 28rem);
+    }
+
+    .apartadoBassHome {
+        width: 100vw;
+    }
+
+    .buttonBassHome {
+        width: 90%;
+    }
+
+    .personaFeliz {
+        width: 40vw;
+        height: 20vh;
+    }
+
+    /* -------------------------------------------------------------------------- */
+
+    /* NUESTROS BAJOS */
+
+    .gridShopBass {
+        display: inline-block;
+        width: 100%;
+    }
+
+
+    .article__bass {
+        width: 20rem;
+        margin: 0 auto;
+
+        img {
+            @include photo-size(18rem, 18rem);
+        }
+    }
+
+    .shop__boxBajos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        article {
+            margin: 1rem auto;
+        }
+    }
+
+    .shop__aside {
+        position: static;
+        width: 15rem;
+        top: 1rem;
+        margin: 2rem 1rem;
+    }
+
+    .gridShopBass aside {
+        margin: 0 auto;
+    }
+
+    .titleBajosVenta {
+        font-size: 2rem;
+    }
+
+    /* -------------------------------------------------------------------------- */
+
+    /* -------------------------------------------------------------------------- */
+
+    /* CONTACTO */
+
+    .formContacto {
+        display: block;
+        width: 100%;
+        margin-top: 1.3vh;
+        margin: 0 auto;
+    }
+
+    .contactoStyle::placeholder {
+        font-size: .9rem;
+    }
+
+    .section__contacto {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        padding: 1vh;
+        width: 20rem;
+        border-radius: 1vh;
+    }
+
+    .backgroundSoporte {
+        h1 {
+            @include font-home-style($color-white-text, 3rem);
+            font-weight: bold;
+        }
+    }
+
+
+    /* -------------------------------------------------------------------------- */
+
+
+    .imgBackgroundNostros {
+        h1 {
+            @include font-home-style($color-white-text, 3rem);
+        }
+    }
+
+}
+
+@media only screen and (max-width:991px) {
+    .fondoBassHomeButtons {
+        height: 65rem !important;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    /* HOME */
+
+    .buttonBassHome:hover {
+        @include photo-size(55%, 4rem);
+
+        a {
+            font-size: 2rem;
+        }
+    }
+
+    .buttonBassHome a {
+        font-size: 1.5rem;
+    }
+
+    /* Fotos */
+
+    .fotoBassHome {
+        position: relative;
+        @include photo-size(30rem, 25rem);
+
+    }
+
+    .circleFoto1 {
+        background-size: 250%;
+    }
+
+    .circleFoto2 {
+        background-position: center top;
+    }
+
+    .circleFoto3 {
+        background-position: center top;
+    }
+
+    /* NUESTROS BAJOS */
+
+    .article__bass {
+        width: 20rem;
+        margin: 0 auto;
+
+        img {
+            @include photo-size(18rem, 18rem);
+        }
+    }
+
+    .shop__boxBajos article {
+        margin: 1rem auto;
+    }
+
+    .shop__aside {
+        width: 15rem;
+        top: 1rem;
+        margin: 2rem 1rem;
+    }
+
+    .personaFeliz {
+        width: 25rem;
+        height: 30vh;
+
+    }
+
+    /* -------------------------------------------------------------------------- */
+
+    .footerBassSomos {
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    /* HOME */
+
+    .fondoBassHomeButtons {
+        height: 40rem;
+
+    }
+
+    .fondoBassHome {
+        margin-bottom: 10rem;
+    }
+
+    .footerBassSomos {
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 0;
+    }
+
+    .personaFeliz {
+        width: 15rem;
+        height: 22vh;
+
+    }
+
+    .titleBass {
+        text-align: center;
+
+    }
+
+    .titleBassRight {
+        text-align: center;
+
+    }
+
+    .textBassHomeRight {
+        text-align: center;
+
+    }
+}
+
+
+@media only screen and (max-width:1440px) {
+
+
+    .footerBassSomos {
+        position: relative;
+        bottom: 0;
+    }
+
+    .personaFeliz {
+        width: 13rem;
+        height: 20vh;
+
+    }
+
+    .titleBass {
+        text-align: center;
+
+    }
+
+    .titleBassRight {
+        text-align: center;
+
+    }
+
+    .textBassHomeRight {
+        text-align: center;
+
+    }
+
+}

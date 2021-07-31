@@ -1,0 +1,21 @@
+{
+  "name": "desafio-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "JacoSass": "sass --watch scss/estilo-Sass.scss css/estilo-Sass.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacofsky/Bassblood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacofsky/Bassblood/issues"
+  },
+  "homepage": "https://github.com/jacofsky/Bassblood#readme"
+}
