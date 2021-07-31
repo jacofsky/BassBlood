@@ -286,7 +286,7 @@ body {
 
     @include photo-size(100%, 100%);
     border-radius: 100%;
-    background-image: url(../../assets/images/flea3.jpg);
+    background-image: url(../assets/images/flea3.jpg);
     background-position: center;
     background-size: 200%;
     border: $color-red .7rem solid;
@@ -296,7 +296,7 @@ body {
 .circleFoto2 {
     @include photo-size(100%, 100%);
     border-radius: 100%;
-    background-image: url(../../assets/images/flea2.jpg);
+    background-image: url(../assets/images/flea2.jpg);
     background-position: center;
     border: $color-light-red .7rem solid;
 
@@ -306,7 +306,7 @@ body {
 
     @include photo-size(100%, 100%);
     border-radius: 100%;
-    background-image: url(../../assets/images/flea1.jpg);
+    background-image: url(../assets/images/flea1.jpg);
     background-position: center;
     border: $color-light-red .7rem solid;
 }
